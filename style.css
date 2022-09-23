@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: cornflowerblue;
+}
+.container {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  position: relative;
+}
+
+.hero .inputField {
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  background-color: white;
+  border-bottom-left-radius: 12px;
+  border-top-left-radius: 12px;
+  width: 80%;
+}
+.hero .inputField:focus {
+  outline: none;
+}
+
+.hero .button {
+  position: absolute;
+  font-size: 20px;
+  padding: 10px;
+  color: rgb(58, 58, 58);
+  background-color: white;
+  border: none;
+  outline: none;
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
+  cursor: pointer;
+}
+
+.results {
+  width: 50%;
+  margin: 0 auto;
+  text-align: start;
+}
+
+.results ul {
+  list-style: none;
+}
+
+.results ul li {
+  background-color: white;
+  padding: 12px;
+  border-radius: 12px;
+  margin: 10px;
+  width: 100%;
+}
+
+h3.new {
+  display: block;
+  background-color: white;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+h3 {
+  display: none;
+}
+
+.error.noInput {
+  padding: 12px;
+  border-radius: 12px;
+  background-color: white;
+  color: rgb(253, 63, 63);
+  display: block;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.error {
+  display: none;
+}
+
+/* loader */
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid rgba(100, 148, 237, 0.555);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  position: absolute;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  display: none;
+}
+
+.loading.show {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(100, 148, 237, 0.555);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 486px) {
+  .hero .inputField {
+    font-size: 15px;
+  }
+  .hero .button {
+    font-size: 15px;
+  }
+}
